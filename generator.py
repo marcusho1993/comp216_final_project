@@ -78,18 +78,23 @@ if __name__ == '__main__':
     tsla = Stock(800, trend=Stock.BEARISH)
     y = [tsla.price for x in range(500)]
     plt.plot(y, 'r')
+    plt.title('Stock - TESLA')
+    plt.xlabel('Days')
+    plt.ylabel('Price')
     plt.show()
 
     aapl = Stock(125, trend=Stock.NEUTRAL, volatility=0.5)
     y = [aapl.price for x in range(500)]
     plt.plot(y, 'b')
+    plt.title('Stock - APPLE')
+    plt.xlabel('Days')
+    plt.ylabel('Price')
     plt.show()
 
     gme = Stock(200, trend=Stock.BULLISH, volatility=2.5)   # 250%
     y = [gme.price for x in range(500)]
     plt.plot(y, 'g')
+    plt.title('Stock - GAMES STOP')
+    plt.xlabel('Days')
+    plt.ylabel('Price')
     plt.show()
-
-
-# push test by Santiago Yepes
-
