@@ -1,3 +1,19 @@
+
+"""
+Winter 2021
+COMP 216-001
+Lab 08 - Data Generator
+
+Team members:
+
+1. Vincent Tse - 301050515
+2. Santiago Yepes Carrera - 301082274
+3. Erwin Joshua Manuel - 301107750
+4. Hoi Fong Ho - 301084469
+5. Kenneth Austin - 301040904
+"""
+
+
 from random import randint
 import matplotlib.pyplot as plt
 
@@ -75,7 +91,7 @@ if __name__ == '__main__':
     # plt.plot(y, 'b')
     # plt.show()
 
-    tsla = Stock(800, trend=Stock.BEARISH)
+    tsla = Stock(800, trend=Stock.BEARISH, volatility=1)
     y = [tsla.price for x in range(500)]
     plt.plot(y, 'r')
     plt.title('Stock - TESLA')
