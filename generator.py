@@ -1,3 +1,19 @@
+
+"""
+Winter 2021
+COMP 216-001
+Lab 08 - Data Generator
+
+Team members:
+
+1. Vincent Tse - 301050515
+2. Santiago Yepes Carrera - 301082274
+3. Erwin Joshua Manuel - 301107750
+4. Hoi Fong Ho - 301084469
+5. Kenneth Austin - 301040904
+"""
+
+
 from random import randint
 import matplotlib.pyplot as plt
 
@@ -63,28 +79,32 @@ class Stock:
     def price(self) -> float:
         return self._generate_normalized() * self._scale
 
+if __name__ == '__main__':
+    # aapl = Stock(125, trend=Stock.BEARISH)
+    # y = [aapl.price for x in range(1000)]
+    # plt.plot(y, 'b')
+    # plt.show()
 
-if __name__ == "__main__":
-    tsla = Stock(800, trend=Stock.BEARISH)
+    tsla = Stock(800, trend=Stock.BEARISH, volatility=1)
     y = [tsla.price for x in range(500)]
-    plt.plot(y, "r")
-    plt.title("Stock - TESLA")
-    plt.xlabel("Days")
-    plt.ylabel("Price")
+    plt.plot(y, 'r')
+    plt.title('Stock - TESLA')
+    plt.xlabel('Days')
+    plt.ylabel('Price')
     plt.show()
 
     aapl = Stock(125, trend=Stock.NEUTRAL, volatility=0.5)
     y = [aapl.price for x in range(500)]
-    plt.plot(y, "b")
-    plt.title("Stock - APPLE")
-    plt.xlabel("Days")
-    plt.ylabel("Price")
+    plt.plot(y, 'b')
+    plt.title('Stock - APPLE')
+    plt.xlabel('Days')
+    plt.ylabel('Price')
     plt.show()
 
     gme = Stock(200, trend=Stock.BULLISH, volatility=2.5)  # 250%
     y = [gme.price for x in range(500)]
-    plt.plot(y, "g")
-    plt.title("Stock - GAMES STOP")
-    plt.xlabel("Days")
-    plt.ylabel("Price")
+    plt.plot(y, 'g')
+    plt.title('Stock - GAMES STOP')
+    plt.xlabel('Days')
+    plt.ylabel('Price')
     plt.show()
